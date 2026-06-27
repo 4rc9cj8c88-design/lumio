@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns — Lumio</title>
+  <meta name="description" content="Lumio ist ein interdisziplinäres Studio aus Strateg:innen, Designer:innen und Filmschaffenden. Lerne das Team und unsere Haltung kennen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scene" aria-hidden="true">
+    <video id="scene-video" class="scene__video" muted playsinline preload="auto" poster="assets/moon-walk.jpg">
+      <source src="assets/moon-walk.mp4" type="video/mp4">
+    </video>
+    <img class="scene__poster" src="assets/moon-walk.jpg" alt="">
+  </div>
+  <div class="scene__veil" aria-hidden="true"></div>
+  <div class="scene__pulse" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="brand" aria-label="Lumio Startseite">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="20" cy="20" rx="9" ry="14" stroke="url(#lg)" stroke-width="2"/>
+            <ellipse cx="20" cy="20" rx="15" ry="18" stroke="url(#lg)" stroke-width="1" opacity="0.5"/>
+            <circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/>
+            <defs><linearGradient id="lg" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#d7e7f5"/><stop offset="1" stop-color="#9cc4e6"/>
+            </linearGradient></defs>
+          </svg>
+          <span class="brand__name">Lumio</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="ueber-uns.html" aria-current="page">Über uns</a></li>
+          <li><a href="prozesse.html">Prozesse</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+        </ul>
+        <a href="kontakt.html" class="btn btn--solid">Kontakt</a>
+        <button class="nav__toggle" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner reveal">
+        <span class="eyebrow">Über uns</span>
+        <h1 class="display">Ein Studio, das Wege baut.</h1>
+        <p class="lead">Wir sind eine Gruppe aus Strateg:innen, Designer:innen und Filmschaffenden, die an einer Idee festhalten: Die stärksten Marken nehmen Menschen mit auf eine Reise.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid--2">
+          <div class="card reveal">
+            <h3>Unsere Haltung</h3>
+            <p>Wir glauben nicht an Design um des Designs willen. Jede Entscheidung dient der Bewegung — dem Schritt, den dein Publikum als Nächstes macht. Klarheit vor Effekt, Atmosphäre vor Lautstärke.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Wie wir arbeiten</h3>
+            <p>Klein, fokussiert und nah am Projekt. Keine Übergaben zwischen anonymen Abteilungen — die Menschen, die deine Marke denken, sind dieselben, die sie bauen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Werte</span>
+          <h2>Drei Dinge, an die wir uns halten.</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Tiefe</h3>
+            <p>Wir gehen einen Schritt weiter hinein, wo andere an der Oberfläche bleiben.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
+            <h3>Handwerk</h3>
+            <p>Pixel, Schnitt und Wort werden so lange poliert, bis sie unsichtbar gut sind.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div>
+            <h3>Partnerschaft</h3>
+            <p>Wir bleiben über das Launch-Datum hinaus an deiner Seite. Marken wachsen weiter.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta glass reveal">
+          <h2>Neugierig auf die Menschen dahinter?</h2>
+          <p class="lead">Am besten lernt man sich im Gespräch kennen. Wir freuen uns auf deins.</p>
+          <a href="kontakt.html" class="btn btn--solid">Sag Hallo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="max-width: 280px;">
+          <a href="index.html" class="brand" style="margin-bottom:16px;">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="20" rx="9" ry="14" stroke="#9cc4e6" stroke-width="2"/><circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/></svg>
+            <span class="brand__name">Lumio</span>
+          </a>
+          <p style="font-size:0.92rem;">Digital- &amp; Brandstudio. Wir führen Marken durch das Tor in neue Welten.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="prozesse.html">Prozesse</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hallo@lumio.studio">hallo@lumio.studio</a></li>
+            <li><a href="tel:+4930123456">+49 30 123 456</a></li>
+            <li>Berlin · Remote</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lumio Studio. Alle Rechte vorbehalten.</span>
+        <span>Impressum · Datenschutz</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scroll-scene.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leistungen — Lumio</title>
+  <meta name="description" content="Strategie, Brand Design, Web & Interface, Motion & Film und mehr — alle Leistungen von Lumio im Überblick.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scene" aria-hidden="true">
+    <video id="scene-video" class="scene__video" muted playsinline preload="auto" poster="assets/moon-walk.jpg">
+      <source src="assets/moon-walk.mp4" type="video/mp4">
+    </video>
+    <img class="scene__poster" src="assets/moon-walk.jpg" alt="">
+  </div>
+  <div class="scene__veil" aria-hidden="true"></div>
+  <div class="scene__pulse" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="brand" aria-label="Lumio Startseite">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="20" cy="20" rx="9" ry="14" stroke="url(#lg)" stroke-width="2"/>
+            <ellipse cx="20" cy="20" rx="15" ry="18" stroke="url(#lg)" stroke-width="1" opacity="0.5"/>
+            <circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/>
+            <defs><linearGradient id="lg" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#d7e7f5"/><stop offset="1" stop-color="#9cc4e6"/>
+            </linearGradient></defs>
+          </svg>
+          <span class="brand__name">Lumio</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="prozesse.html">Prozesse</a></li>
+          <li><a href="leistungen.html" aria-current="page">Leistungen</a></li>
+        </ul>
+        <a href="kontakt.html" class="btn btn--solid">Kontakt</a>
+        <button class="nav__toggle" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner reveal">
+        <span class="eyebrow">Leistungen</span>
+        <h1 class="display">Was wir für dich bauen.</h1>
+        <p class="lead">Strategie, Gestaltung und Bewegtbild greifen bei uns ineinander. Du bekommst kein Sammelsurium aus Einzelteilen, sondern ein zusammenhängendes Erlebnis.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid--2">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div>
+            <h3>Markenstrategie</h3>
+            <p>Positionierung, Markenkern, Zielgruppen und Narrativ. Wir klären, wofür du stehst — bevor irgendetwas gestaltet wird.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 22a10 10 0 0 1 0-20"/></svg></div>
+            <h3>Brand &amp; Visual Identity</h3>
+            <p>Logo, Farbwelt, Typografie und Designsystem — ein visueller Auftritt, der über alle Kanäle hinweg trägt.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+            <h3>Web &amp; Interface</h3>
+            <p>Immersive Websites, Landingpages und digitale Produkte. Performant, barrierearm und gebaut wie diese Seite hier.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="10 8 16 12 10 16 10 8"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div>
+            <h3>Motion &amp; Film</h3>
+            <p>Bewegtbild, Animation und Hero-Loops, die Atmosphäre erzeugen — vom Spot bis zur scroll-gesteuerten Szene.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Content &amp; Text</h3>
+            <p>Markenstimme, Microcopy und redaktionelle Inhalte, die genauso klingen, wie deine Marke sich anfühlt.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M12 12l9-5-9-5-9 5 9 5z"/></svg></div>
+            <h3>Begleitung &amp; Wachstum</h3>
+            <p>Nach dem Launch geht es weiter: Optimierung, Iteration und kontinuierliche Weiterentwicklung deiner Welt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pakete</span>
+          <h2>Drei Wege, mit uns zu starten.</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="card reveal">
+            <h3>Spark</h3>
+            <p style="color:var(--accent-2);font-family:var(--font-display);font-size:1.6rem;margin:0 0 12px;">ab 4.900 €</p>
+            <p>Landingpage oder kompakter Markenauftritt. Perfekt, um schnell sichtbar zu werden.</p>
+          </div>
+          <div class="card reveal" style="border-color: rgba(156,196,230,0.4);">
+            <h3>Journey</h3>
+            <p style="color:var(--accent-2);font-family:var(--font-display);font-size:1.6rem;margin:0 0 12px;">ab 14.900 €</p>
+            <p>Vollständige Website plus Markendesign und Motion. Unser beliebtestes Paket.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Universe</h3>
+            <p style="color:var(--accent-2);font-family:var(--font-display);font-size:1.6rem;margin:0 0 12px;">individuell</p>
+            <p>Strategie, Brand, Produkt und laufende Begleitung — als langfristige Partnerschaft.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta glass reveal">
+          <h2>Welcher Weg passt zu dir?</h2>
+          <p class="lead">Lass uns gemeinsam herausfinden, was deine Marke jetzt braucht.</p>
+          <a href="kontakt.html" class="btn btn--solid">Unverbindlich anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="max-width: 280px;">
+          <a href="index.html" class="brand" style="margin-bottom:16px;">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="20" rx="9" ry="14" stroke="#9cc4e6" stroke-width="2"/><circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/></svg>
+            <span class="brand__name">Lumio</span>
+          </a>
+          <p style="font-size:0.92rem;">Digital- &amp; Brandstudio. Wir führen Marken durch das Tor in neue Welten.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="prozesse.html">Prozesse</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:hallo@lumio.studio">hallo@lumio.studio</a></li>
+            <li><a href="tel:+4930123456">+49 30 123 456</a></li>
+            <li>Berlin · Remote</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lumio Studio. Alle Rechte vorbehalten.</span>
+        <span>Impressum · Datenschutz</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scroll-scene.js"></script>
+</body>
+</html>
