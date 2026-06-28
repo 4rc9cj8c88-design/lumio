@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Über uns — Lumio</title>
-  <meta name="description" content="Lumio ist ein interdisziplinäres Studio aus Strateg:innen, Designer:innen und Filmschaffenden. Lerne das Team und unsere Haltung kennen.">
+  <meta name="description" content="Lumio ist ein Webdesign- und KI-Studio aus Aidlingen, gegründet 2026 von Miko Brüll und Nevio Liebig. Persönlich, regional und auf lokale Unternehmen ausgerichtet.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,20 +25,13 @@
     <div class="container">
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="index.html" class="brand" aria-label="Lumio Startseite">
-          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="20" cy="20" rx="9" ry="14" stroke="url(#lg)" stroke-width="2"/>
-            <ellipse cx="20" cy="20" rx="15" ry="18" stroke="url(#lg)" stroke-width="1" opacity="0.5"/>
-            <circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/>
-            <defs><linearGradient id="lg" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#d7e7f5"/><stop offset="1" stop-color="#9cc4e6"/>
-            </linearGradient></defs>
-          </svg>
-          <span class="brand__name">Lumio</span>
+          <img class="brand__logo" src="assets/logo-lockup-light.png" alt="Lumio">
         </a>
         <ul class="nav__links">
+          <li><a href="index.html">Startseite</a></li>
           <li><a href="ueber-uns.html" aria-current="page">Über uns</a></li>
-          <li><a href="prozesse.html">Prozesse</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="leistungen.html">Unser Angebot</a></li>
+          <li><a href="prozesse.html">Unsere Arbeit</a></li>
         </ul>
         <a href="kontakt.html" class="btn btn--solid">Kontakt</a>
         <button class="nav__toggle" aria-label="Menü öffnen">
@@ -53,7 +46,54 @@
       <div class="container page-hero__inner reveal">
         <span class="eyebrow">Über uns</span>
         <h1 class="display">Ein Studio, das Wege baut.</h1>
-        <p class="lead">Wir sind eine Gruppe aus Strateg:innen, Designer:innen und Filmschaffenden, die an einer Idee festhalten: Die stärksten Marken nehmen Menschen mit auf eine Reise.</p>
+        <p class="lead">Lumio ist ein junges Webdesign- &amp; KI-Studio aus Aidlingen in Baden-Württemberg, 2026 von Miko Brüll und Nevio Liebig gegründet. Unsere Idee: lokalen Unternehmen einen Auftritt geben, der wirklich Kund:innen bringt — und ihnen mit smarter Automatisierung Arbeit abnehmen.</p>
+        <div class="factbar">
+          <span class="factbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg> Gegründet <strong>2026</strong></span>
+          <span class="factbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <strong>Aidlingen</strong>, Baden-Württemberg</span>
+          <span class="factbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg> <strong>2</strong> Gründer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gründer ===== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Die Gründer</span>
+          <h2>Zwei Köpfe, eine Vision.</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="card founder reveal">
+            <div class="founder__portrait" aria-label="Portrait Miko Brüll">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+              <span>Portrait</span>
+            </div>
+            <div>
+              <div class="founder__role">Gründer &amp; Geschäftsführer</div>
+              <h3>Miko Brüll</h3>
+              <p>Kümmert sich um Design und Gestaltung — und sorgt dafür, dass deine Website nicht nur gut aussieht, sondern auch Anfragen bringt.</p>
+              <div class="founder__contact">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> <span class="placeholder">[E-Mail]</span></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13 1 .36 1.94.7 2.85a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.23-1.23a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.85.7A2 2 0 0 1 22 16.92z"/></svg> <span class="placeholder">[Telefonnummer]</span></span>
+              </div>
+            </div>
+          </article>
+          <article class="card founder reveal">
+            <div class="founder__portrait" aria-label="Portrait Nevio Liebig">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+              <span>Portrait</span>
+            </div>
+            <div>
+              <div class="founder__role">Gründer &amp; Geschäftsführer</div>
+              <h3>Nevio Liebig</h3>
+              <p>Verantwortet Technik und KI-Automatisierung — schnelle, saubere Umsetzung und Prozesse, die dir wiederkehrende Arbeit abnehmen.</p>
+              <div class="founder__contact">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> <span class="placeholder">[E-Mail]</span></span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13 1 .36 1.94.7 2.85a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.23-1.23a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.85.7A2 2 0 0 1 22 16.92z"/></svg> <span class="placeholder">[Telefonnummer]</span></span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -62,11 +102,11 @@
         <div class="grid grid--2">
           <div class="card reveal">
             <h3>Unsere Haltung</h3>
-            <p>Wir glauben nicht an Design um des Designs willen. Jede Entscheidung dient der Bewegung — dem Schritt, den dein Publikum als Nächstes macht. Klarheit vor Effekt, Atmosphäre vor Lautstärke.</p>
+            <p>Eine Website muss arbeiten. Wir gestalten nicht für Designpreise, sondern dafür, dass dein Telefon klingelt und dein Postfach sich füllt — verständlich umgesetzt, ohne Schnickschnack.</p>
           </div>
           <div class="card reveal">
             <h3>Wie wir arbeiten</h3>
-            <p>Klein, fokussiert und nah am Projekt. Keine Übergaben zwischen anonymen Abteilungen — die Menschen, die deine Marke denken, sind dieselben, die sie bauen.</p>
+            <p>Klein, persönlich und direkt. Du sprichst immer mit uns Gründern — nicht mit wechselnden Abteilungen oder einer Hotline. Kurze Wege, schnelle Entscheidungen.</p>
           </div>
         </div>
       </div>
@@ -80,19 +120,19 @@
         </div>
         <div class="grid grid--3">
           <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Nähe</h3>
+            <p>Aus der Region, für die Region. Kurze Wege, echte Erreichbarkeit und ein Gesicht zum Projekt.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Klartext</h3>
+            <p>Keine Buzzwords. Wir erklären verständlich, was wir tun, was es bringt und was es kostet.</p>
+          </article>
+          <article class="card reveal">
             <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>Tiefe</h3>
-            <p>Wir gehen einen Schritt weiter hinein, wo andere an der Oberfläche bleiben.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
-            <h3>Handwerk</h3>
-            <p>Pixel, Schnitt und Wort werden so lange poliert, bis sie unsichtbar gut sind.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div>
-            <h3>Partnerschaft</h3>
-            <p>Wir bleiben über das Launch-Datum hinaus an deiner Seite. Marken wachsen weiter.</p>
+            <h3>Verlässlich</h3>
+            <p>Faire Preise, realistische Termine — und wir bleiben auch nach dem Launch an deiner Seite.</p>
           </article>
         </div>
       </div>
@@ -114,8 +154,7 @@
       <div class="footer-grid">
         <div class="footer-col" style="max-width: 280px;">
           <a href="index.html" class="brand" style="margin-bottom:16px;">
-            <svg class="brand__mark" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="20" rx="9" ry="14" stroke="#9cc4e6" stroke-width="2"/><circle cx="20" cy="24" r="2.3" fill="#d7e7f5"/></svg>
-            <span class="brand__name">Lumio</span>
+            <img class="brand__logo brand__logo--sm" src="assets/logo-lockup-light.png" alt="Lumio">
           </a>
           <p style="font-size:0.92rem;">Digital- &amp; Brandstudio. Wir führen Marken durch das Tor in neue Welten.</p>
         </div>
@@ -123,23 +162,30 @@
           <h4>Studio</h4>
           <ul>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="prozesse.html">Prozesse</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="leistungen.html">Unser Angebot</a></li>
+          <li><a href="prozesse.html">Unsere Arbeit</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Kontakt</h4>
           <ul>
-            <li><a href="mailto:hallo@lumio.studio">hallo@lumio.studio</a></li>
-            <li><a href="tel:+4930123456">+49 30 123 456</a></li>
-            <li>Berlin · Remote</li>
+            <li><a href="mailto:info@lumio.com">info@lumio.com</a></li>
+            <li><a href="tel:+4970000000000">+49 [Telefon]</a></li>
+            <li>Aidlingen · Remote</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Lumio Studio. Alle Rechte vorbehalten.</span>
-        <span>Impressum · Datenschutz</span>
+        <span>© 2026 Lumio. Alle Rechte vorbehalten.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>

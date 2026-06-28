@@ -26,6 +26,16 @@
     let shownTime = 0;     // video time currently applied (eased)
     let raf = null;
 
+    // Detect phones / touch / data-saver: the moon-walk master is a 4K
+    // ~29 MB file — far too heavy to scrub on a phone. In "lite" mode we
+    // skip the download entirely and keep the poster with a lighter
+    // scroll parallax, so mobile still gets the dive-in feel without the cost.
+    const conn = navigator.connection || {};
+    const isLite =
+      window.matchMedia("(max-width: 768px)").matches ||
+      window.matchMedia("(pointer: coarse)").matches ||
+      conn.saveData === true;
+
     // Prime the video so the browser decodes/buffers it and seeking
     // becomes responsive. Muted + playsinline keeps autoplay policies happy.
     function prime() {
@@ -93,33 +103,51 @@
       if (pulse) pulse.style.opacity = (p * 0.85).toFixed(3);
     }
 
-    function start() {
-      scene.classList.add("is-ready");
-      duration = video.duration || 0;
+    function wireScroll() {
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", onScroll, { passive: true });
       onScroll(); // sync to initial position
     }
 
-    video.addEventListener("loadedmetadata", function () {
+    function start() {
+      scene.classList.add("is-ready");
       duration = video.duration || 0;
-    });
+      wireScroll();
+    }
 
-    video.addEventListener("canplay", function () {
-      prime();
-      start();
-    }, { once: true });
+    if (isLite) {
+      // Abort any in-flight video fetch and keep the poster on screen.
+      scene.classList.add("is-lite");
+      try {
+        video.preload = "none";
+        const src = video.querySelector("source");
+        if (src) src.removeAttribute("src");
+        video.removeAttribute("src");
+        video.load(); // cancels buffering of the 4K master
+      } catch (e) {}
+      // duration stays 0 → no seeking; applyDepth still runs on scroll.
+      wireScroll();
+    } else {
+      video.addEventListener("loadedmetadata", function () {
+        duration = video.duration || 0;
+      });
 
-    // If the video can't load (file missing etc.) keep the poster and
-    // still drive the depth push from scroll.
-    video.addEventListener("error", start, { once: true });
+      video.addEventListener("canplay", function () {
+        prime();
+        start();
+      }, { once: true });
 
-    // Safety net: if neither event fired shortly after load, start anyway.
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        if (!scene.classList.contains("is-ready")) start();
-      }, 1200);
-    });
+      // If the video can't load (file missing etc.) keep the poster and
+      // still drive the depth push from scroll.
+      video.addEventListener("error", start, { once: true });
+
+      // Safety net: if neither event fired shortly after load, start anyway.
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          if (!scene.classList.contains("is-ready")) start();
+        }, 1200);
+      });
+    }
   }
 
   /* ---------- 3. Header state on scroll ---------- */
@@ -160,5 +188,29 @@
     } else {
       reveals.forEach(function (el) { el.classList.add("is-visible"); });
     }
+  }
+
+  /* ---------- 6. AI Automation notify (coming soon) ---------- */
+  const notifyForm = document.getElementById("notify-form");
+  if (notifyForm) {
+    const input = document.getElementById("notify-email");
+    const note = document.getElementById("notify-note");
+    notifyForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!input.value || !input.checkValidity()) {
+        note.textContent = "Bitte gib eine gültige E-Mail-Adresse ein.";
+        note.style.color = "var(--muted)";
+        input.focus();
+        return;
+      }
+      // No backend yet — confirm interest and offer a mailto fallback.
+      note.innerHTML = "Danke! Wir melden uns, sobald AI Automation startet. " +
+        '<a href="mailto:info@lumio.com?subject=' +
+        encodeURIComponent("AI Automation — bitte vormerken") +
+        '&body=' + encodeURIComponent("Bitte benachrichtigt mich: " + input.value) +
+        '" style="color:var(--accent-2);text-decoration:underline;">Per E-Mail bestätigen</a>';
+      note.style.color = "var(--accent-2)";
+      notifyForm.reset();
+    });
   }
 })();

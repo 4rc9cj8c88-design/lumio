@@ -8,15 +8,47 @@ zoomt tiefer in das Tor hinein – man stößt Stück für Stück weiter in die 
 ## Seiten
 | Datei | Inhalt |
 |-------|--------|
-| `index.html` | Hauptseite mit Hero, Kennzahlen, Leistungs-Vorschau und CTA |
-| `ueber-uns.html` | Über uns – Haltung, Arbeitsweise, Werte |
-| `prozesse.html` | Prozesse – 4 Etappen (Entdecken → Launch) |
-| `leistungen.html` | Leistungen – Disziplinen und Pakete |
-| `kontakt.html` | Kontaktformular (öffnet das Mailprogramm) |
+| `index.html` | Hauptseite: Hero („Wir bringen dein Unternehmen ans Licht."), Kennzahlen, Leistungs-Vorschau, **AI Automation (coming soon)**, CTA |
+| `ueber-uns.html` | Über uns – Gründer (Miko Brüll & Nevio Liebig) mit Kontakt-Platzhaltern, Eckdaten (2026, Aidlingen/BW), Haltung, Werte |
+| `prozesse.html` | **Unsere Arbeit** – Vorgehen als animierter Lichtstrahl (4 Phasen) + Partner-/Kunden-Logos (Platzhalter) |
+| `leistungen.html` | **Unser Angebot** – Regelschieber zwischen *Website-Erstellung* und *AI Automation (coming soon)*, Disziplinen + Pakete |
+| `kontakt.html` | **Angebots-Assistent** (4 Schritte: Bereich → Details → Kontakt → Übersicht), öffnet das Mailprogramm |
+| `impressum.html` | Impressum nach § 5 DDG (Vorlage, Platzhalter markiert) |
+| `datenschutz.html` | Datenschutzerklärung nach DSGVO (Vorlage, Platzhalter markiert) |
+
+## AI Automation (coming soon)
+AI Automation ist als „Bald verfügbar" angelegt: ein Abschnitt auf der Startseite und in
+den Leistungen mit einem „Benachrichtigen"-Feld (sammelt Interesse per E-Mail-Fallback).
+Wenn das Angebot live geht, lässt es sich zu einer eigenen Seite ausbauen.
+
+## Angebots-Assistent (`kontakt.html`)
+Mehrstufiger Assistent: **1) Umfang** – Funktions-Auswahl (Landingpage, Kontaktformular,
+mehrseitig, Shop, SEO, Motion, Branding, AI …), **2) Kontakt** – Name/E-Mail/Nachricht,
+**3) Übersicht** – Zusammenfassung. Beim Absenden öffnet sich das Mailprogramm mit einer
+fertigen Anfrage. Kein Backend nötig.
+
+## Mobil & Desktop
+Das Layout ist vollständig responsiv (Hamburger-Menü ab ≤ 880 px). Zusätzlich erkennt
+`scroll-scene.js` Handys/Touch/Data-Saver und schaltet in einen **Lite-Modus**: Statt das
+4K-Video zu scrubben, bleibt das Poster stehen und es läuft nur die leichte Scroll-Parallaxe
+– das spart Datenvolumen und Akku.
+
+## Rechtliche Hinweise
+Impressum und Datenschutzerklärung sind **Vorlagentexte**. Mit `[…]` markierte Felder
+(Straße, Telefon, E-Mail, Hosting-Anbieter) müssen vor dem Live-Gang ergänzt und die Texte
+anwaltlich geprüft werden. Hinweis zu Google Fonts: Die Schriften werden derzeit extern von
+Google geladen – für eine datensparsame Lösung sollten sie selbst gehostet werden.
 
 ## Header
-Logo + Name **Lumio**, Navigation **Über uns · Prozesse · Leistungen** sowie ein
-**Kontakt**-Button. Auf Mobilgeräten klappt das Menü über das Hamburger-Icon aus.
+Logo (Buchstabe **„L"** mit Glow in der Portal-Ellipse) + Name **Lumio**, Navigation
+**Startseite · Über uns · Unser Angebot · Unsere Arbeit** sowie ein **Kontakt**-Button.
+Auf Mobilgeräten klappt das Menü über das Hamburger-Icon aus.
+
+## „Unser Angebot" — Regelschieber
+Auf `leistungen.html` schaltet ein Schieberegler zwischen zwei Welten um:
+**Website-Erstellung** (Disziplinen + Pakete) und **AI Automation** (Coming-soon-Ansicht).
+Der Angebots-Assistent fragt entsprechend als Erstes den **Bereich** ab und passt die
+Folgeschritte an (bei AI Automation entfällt die Funktions-Auswahl).
 
 ## Aufbau
 ```
