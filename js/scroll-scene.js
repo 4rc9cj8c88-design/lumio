@@ -160,6 +160,16 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---------- 3b. Scroll cue: pinned to bottom, fades once scrolling ---------- */
+  const cue = document.querySelector(".scroll-cue");
+  if (cue) {
+    const onCue = function () {
+      cue.classList.toggle("is-hidden", window.scrollY > 60);
+    };
+    onCue();
+    window.addEventListener("scroll", onCue, { passive: true });
+  }
+
   /* ---------- 4. Mobile nav ---------- */
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav__toggle");
