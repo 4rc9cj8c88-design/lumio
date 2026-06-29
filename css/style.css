@@ -1277,9 +1277,12 @@ main { position: relative; z-index: 1; }
   justify-content: center;
   gap: 9px;
   margin: 22px 0 0;
-  font-size: 0.9rem;
-  color: var(--muted-2);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
   text-align: center;
+  /* dark halo so it stays legible over the bright centre of the portal */
+  text-shadow: 0 2px 26px rgba(4, 7, 12, 0.95), 0 1px 4px rgba(4, 7, 12, 0.98);
 }
 .pricing-note svg { width: 16px; height: 16px; flex: none; color: var(--accent); }
 
