@@ -490,6 +490,8 @@ main { position: relative; z-index: 1; }
 .contact-info { list-style: none; margin: 0; padding: 0; }
 .contact-info strong { color: var(--ink); font-weight: 500; }
 .contact-info svg { width: 20px; height: 20px; color: var(--accent); flex: none; margin-top: 2px; }
+.contact-info__label { font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-2); }
+.contact-info__label:not(:first-child) { display: inline-block; margin-top: 8px; }
 
 /* ============================================================
    Footer
