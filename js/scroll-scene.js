@@ -215,7 +215,7 @@
       }
       // No backend yet — confirm interest and offer a mailto fallback.
       note.innerHTML = "Danke! Wir melden uns, sobald AI Automation startet. " +
-        '<a href="mailto:info@lumio.com?subject=' +
+        '<a href="mailto:info@lumio-agency.de?subject=' +
         encodeURIComponent("AI Automation — bitte vormerken") +
         '&body=' + encodeURIComponent("Bitte benachrichtigt mich: " + input.value) +
         '" style="color:var(--accent-2);text-decoration:underline;">Per E-Mail bestätigen</a>';
