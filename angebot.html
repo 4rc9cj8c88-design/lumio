@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angebot anfragen — Lumio</title>
+  <meta name="description" content="Fordere dein unverbindliches Angebot an: Wähle den Bereich und den Umfang, hinterlasse deine Kontaktdaten — wir melden uns innerhalb eines Werktags.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scene" aria-hidden="true">
+    <video id="scene-video" class="scene__video" muted playsinline preload="auto" poster="assets/moon-walk.jpg">
+      <source src="assets/moon-walk.mp4" type="video/mp4">
+    </video>
+    <img class="scene__poster" src="assets/moon-walk.jpg" alt="">
+  </div>
+  <div class="scene__veil" aria-hidden="true"></div>
+  <div class="scene__pulse" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="brand" aria-label="Lumio Startseite">
+          <img class="brand__logo" src="assets/logo-lockup-light.png" alt="Lumio">
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="leistungen.html">Unser Angebot</a></li>
+          <li><a href="prozesse.html">Unsere Arbeit</a></li>
+        </ul>
+        <a href="kontakt.html" class="btn btn--solid">Kontakt</a>
+        <button class="nav__toggle" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner reveal">
+        <span class="eyebrow">Angebot anfragen</span>
+        <h1 class="display">Hol dir dein Angebot.</h1>
+        <p class="lead">In wenigen Schritten zu deinem unverbindlichen Angebot: Sag uns, welcher Bereich dich interessiert und was du brauchst — den Rest klären wir gemeinsam. Wir melden uns innerhalb eines Werktags.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container" style="max-width: 880px;">
+        <div class="glass wizard reveal">
+          <!-- Progress -->
+          <div class="wizard__progress" aria-hidden="true">
+            <div class="wizard__progress-item is-active" data-progress="1"><span></span><span>1 · Bereich</span></div>
+            <div class="wizard__progress-item" data-progress="2"><span></span><span>2 · Details</span></div>
+            <div class="wizard__progress-item" data-progress="3"><span></span><span>3 · Kontakt</span></div>
+            <div class="wizard__progress-item" data-progress="4"><span></span><span>4 · Übersicht</span></div>
+          </div>
+
+          <form id="quote-form" novalidate autocomplete="off">
+            <!-- Step 1: Bereich -->
+            <div class="wizard__panel is-active" data-step="1">
+              <h3>Welcher Bereich interessiert dich?</h3>
+              <p>Wähle, worum es gehen soll. Das passt die nächsten Schritte an.</p>
+              <div class="options options--bereich" id="area-options">
+                <label class="option-card option-card--radio">
+                  <input type="radio" name="area" value="website">
+                  <span class="option-card__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>
+                  <span>
+                    <span class="option-card__title">Website-Erstellung</span>
+                    <span class="option-card__desc">Landingpage, mehrseitige Website, Shop, Design &amp; mehr</span>
+                  </span>
+                </label>
+                <label class="option-card option-card--radio">
+                  <input type="radio" name="area" value="ai">
+                  <span class="option-card__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>
+                  <span>
+                    <span class="option-card__title">AI Automation <span class="badge badge--soon" style="font-size:0.6rem;padding:2px 7px;">Bald</span></span>
+                    <span class="option-card__desc">Automatisierte Workflows &amp; KI — bald verfügbar</span>
+                  </span>
+                </label>
+              </div>
+              <p id="step1-note" class="notify__note"></p>
+            </div>
+
+            <!-- Step 2: Details -->
+            <div class="wizard__panel" data-step="2">
+              <!-- 2a: Website scope -->
+              <div data-scope="website">
+                <h3>Was soll deine Website können?</h3>
+                <p>Wähle alles aus, was passt — Mehrfachauswahl möglich. Unsicher? Wähl grob, wir beraten dich danach.</p>
+                <div class="options" id="feature-options"></div>
+                <p id="step2-note" class="notify__note"></p>
+              </div>
+              <!-- 2b: AI coming soon -->
+              <div data-scope="ai" hidden>
+                <span class="badge badge--soon">Coming soon</span>
+                <h3 style="margin-top:18px;">AI Automation ist in Entwicklung</h3>
+                <p>Wir bauen unseren KI-Bereich gerade auf. Hinterlass im nächsten Schritt deine Daten und beschreib kurz, was du automatisieren möchtest — wir melden uns, sobald es losgeht, und du bist unter den Ersten.</p>
+              </div>
+            </div>
+
+            <!-- Step 3: Kontakt -->
+            <div class="wizard__panel" data-step="3">
+              <h3>Wie erreichen wir dich?</h3>
+              <p>Damit wir dir ein passendes Angebot schicken können.</p>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="company">Unternehmen (optional)</label>
+                <input type="text" id="company" name="company" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="message">Worum geht es? (optional)</label>
+                <textarea id="message" name="message" placeholder="Erzähl uns kurz von deinem Vorhaben …"></textarea>
+              </div>
+              <p id="step3-note" class="notify__note"></p>
+            </div>
+
+            <!-- Step 4: Übersicht -->
+            <div class="wizard__panel" data-step="4">
+              <h3>Passt das so?</h3>
+              <p>Prüf deine Angaben und schick die Anfrage ab. Dein Mailprogramm öffnet sich mit der fertigen Nachricht.</p>
+              <ul class="summary" id="summary"></ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="wizard__actions">
+              <button type="button" class="btn btn--ghost" data-action="back" data-hidden>← Zurück</button>
+              <button type="button" class="btn btn--solid" data-action="next">Weiter →</button>
+              <button type="submit" class="btn btn--solid" data-action="submit" style="display:none;">Anfrage senden</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="max-width: 280px;">
+          <a href="index.html" class="brand" style="margin-bottom:16px;">
+            <img class="brand__logo brand__logo--sm" src="assets/logo-lockup-light.png" alt="Lumio">
+          </a>
+          <p style="font-size:0.92rem;">Web &amp; AI Agency. Wir bringen dein Unternehmen ans Licht.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Agentur</h4>
+          <ul>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="leistungen.html">Unser Angebot</a></li>
+            <li><a href="prozesse.html">Unsere Arbeit</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:info@lumio.com">info@lumio.com</a></li>
+            <li><a href="tel:+4970000000000">+49 [Telefon]</a></li>
+            <li>Aidlingen · Remote</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lumio. Alle Rechte vorbehalten.</span>
+        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scroll-scene.js"></script>
+  <script>
+  /* ===== Angebots-Assistent (Bereich → Details → Kontakt → Übersicht) ===== */
+  (function () {
+    var FEATURES = [
+      { id: "landingpage", title: "Landingpage", desc: "Eine fokussierte Seite mit Kontaktmöglichkeit" },
+      { id: "mehrseitig",  title: "Mehrseitige Website", desc: "Mehrere Unterseiten (Start, Leistungen, Über uns …)" },
+      { id: "relaunch", title: "Relaunch", desc: "Bestehende Website modernisieren" },
+      { id: "kontaktformular", title: "Kontakt & Formular", desc: "Anfragen direkt über die Seite empfangen" },
+      { id: "terminbuchung", title: "Terminanfragen", desc: "Termine online anfragen lassen" },
+      { id: "blog", title: "Blog / News", desc: "Redaktionsbereich für eigene Inhalte" },
+      { id: "shop", title: "Online-Shop", desc: "Produkte online verkaufen" }
+    ];
+
+    var form = document.getElementById("quote-form");
+    if (!form) return;
+
+    var checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>';
+
+    // Build website feature cards
+    var wrap = document.getElementById("feature-options");
+    FEATURES.forEach(function (f) {
+      var label = document.createElement("label");
+      label.className = "option-card";
+      label.innerHTML =
+        '<input type="checkbox" name="feature" value="' + f.id + '" data-title="' + f.title + '">' +
+        '<span class="option-card__box">' + checkIcon + '</span>' +
+        '<span><span class="option-card__title">' + f.title + '</span>' +
+        '<span class="option-card__desc">' + f.desc + '</span></span>';
+      var input = label.querySelector("input");
+      input.checked = false;
+      input.addEventListener("change", function () {
+        label.classList.toggle("selected", input.checked);
+        document.getElementById("step2-note").textContent = "";
+      });
+      wrap.appendChild(label);
+    });
+
+    // Area radios
+    var area = null;
+    var areaInputs = form.querySelectorAll('input[name="area"]');
+    areaInputs.forEach(function (inp) {
+      inp.checked = false;
+      inp.addEventListener("change", function () {
+        area = inp.value;
+        form.querySelectorAll("#area-options .option-card").forEach(function (c) {
+          c.classList.toggle("selected", c.querySelector("input").checked);
+        });
+        // swap step-2 sub-panel
+        form.querySelector('[data-scope="website"]').hidden = area !== "website";
+        form.querySelector('[data-scope="ai"]').hidden = area !== "ai";
+        document.getElementById("step1-note").textContent = "";
+      });
+    });
+
+    var step = 1;
+    var TOTAL = 4;
+    var panels = form.querySelectorAll(".wizard__panel");
+    var progress = document.querySelectorAll(".wizard__progress-item");
+    var btnBack = form.querySelector('[data-action="back"]');
+    var btnNext = form.querySelector('[data-action="next"]');
+    var btnSubmit = form.querySelector('[data-action="submit"]');
+
+    function selectedFeatures() {
+      return Array.prototype.slice
+        .call(form.querySelectorAll('input[name="feature"]:checked'))
+        .map(function (i) { return i.getAttribute("data-title"); });
+    }
+    function areaLabel() { return area === "ai" ? "AI Automation (in Entwicklung)" : "Website-Erstellung"; }
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; }
+    function esc(s) { return s.replace(/[<>&]/g, function (c) { return { "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]; }); }
+
+    function render() {
+      panels.forEach(function (p) { p.classList.toggle("is-active", +p.getAttribute("data-step") === step); });
+      progress.forEach(function (p) {
+        var n = +p.getAttribute("data-progress");
+        p.classList.toggle("is-active", n === step);
+        p.classList.toggle("is-done", n < step);
+      });
+      btnBack.toggleAttribute("data-hidden", step === 1);
+      btnNext.style.display = step < TOTAL ? "" : "none";
+      btnSubmit.style.display = step === TOTAL ? "" : "none";
+      if (step === TOTAL) buildSummary();
+      form.closest(".wizard").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function buildSummary() {
+      var sum = document.getElementById("summary");
+      var html = "<li><strong>Bereich</strong><span>" + areaLabel() + "</span></li>";
+      if (area === "website") {
+        var feats = selectedFeatures();
+        var chips = feats.length
+          ? '<div class="summary__chips">' + feats.map(function (f) { return "<span>" + f + "</span>"; }).join("") + "</div>"
+          : '<span style="color:var(--muted)">—</span>';
+        html += "<li><strong>Umfang</strong>" + chips + "</li>";
+      }
+      html += "<li><strong>Name</strong><span>" + esc(val("name")) + "</span></li>";
+      html += "<li><strong>E-Mail</strong><span>" + esc(val("email")) + "</span></li>";
+      if (val("company")) html += "<li><strong>Unternehmen</strong><span>" + esc(val("company")) + "</span></li>";
+      if (val("message")) html += "<li><strong>Nachricht</strong><span>" + esc(val("message")) + "</span></li>";
+      sum.innerHTML = html;
+    }
+
+    function validateStep() {
+      if (step === 1 && !area) {
+        document.getElementById("step1-note").textContent = "Bitte wähle einen Bereich aus.";
+        return false;
+      }
+      if (step === 2 && area === "website" && selectedFeatures().length === 0) {
+        document.getElementById("step2-note").textContent = "Bitte wähle mindestens eine Funktion aus.";
+        return false;
+      }
+      if (step === 3) {
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        if (!name.value.trim() || !email.checkValidity()) {
+          document.getElementById("step3-note").textContent = "Bitte gib deinen Namen und eine gültige E-Mail an.";
+          if (!name.value.trim()) name.focus(); else email.focus();
+          return false;
+        }
+      }
+      return true;
+    }
+
+    btnNext.addEventListener("click", function () {
+      if (!validateStep()) return;
+      if (step < TOTAL) { step++; render(); }
+    });
+    btnBack.addEventListener("click", function () {
+      if (step > 1) { step--; render(); }
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!validateStep()) return;
+      var body = "Bereich: " + areaLabel();
+      if (area === "website") {
+        var feats = selectedFeatures();
+        body += "\n\nProjekt-Umfang:\n- " + (feats.length ? feats.join("\n- ") : "—");
+      }
+      body += "\n\nName: " + val("name") +
+        "\nE-Mail: " + val("email") +
+        (val("company") ? "\nUnternehmen: " + val("company") : "") +
+        (val("message") ? "\n\nNachricht:\n" + val("message") : "");
+      window.location.href =
+        "mailto:info@lumio.com?subject=" +
+        encodeURIComponent("Angebotsanfrage (" + areaLabel() + ") von " + val("name")) +
+        "&body=" + encodeURIComponent(body);
+    });
+
+    // Deep-link: angebot.html#ai preselects the automation area
+    if (location.hash === "#ai") {
+      var aiRadio = form.querySelector('input[name="area"][value="ai"]');
+      if (aiRadio) { aiRadio.checked = true; aiRadio.dispatchEvent(new Event("change")); }
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>
