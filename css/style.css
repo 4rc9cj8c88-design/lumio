@@ -1062,6 +1062,7 @@ main { position: relative; z-index: 1; }
 .flow__phase,
 .flow__step h3,
 .flow__step p,
+.contact-info,
 .scroll-cue {
   text-shadow: 0 2px 30px rgba(4, 7, 12, 0.88), 0 1px 4px rgba(4, 7, 12, 0.95);
 }
